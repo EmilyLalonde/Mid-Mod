@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import CardContainer from '../CardContainer/CardContainer.js'
+import { getData } from '../apiCalls/apiCalls.js'
 import AppForm from '../AppForm/AppForm.js'
 
 class App extends Component {
@@ -12,8 +13,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-     fetch('http://localhost:3001/api/v1/purchases')
-    .then(response => response.json())
+     getData()
     .then(data => this.setState({ data }))
     .catch(error => error.message)
   }

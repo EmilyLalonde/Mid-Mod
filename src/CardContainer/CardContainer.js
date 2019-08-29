@@ -6,7 +6,7 @@ const CardContainer = ({data}) => {
   const allPurchases = data.map(purchase => {
     return (
       <Card 
-      key = {purchase.name + Date.now()}
+      key = {1}
       id = {purchase.id}
       img = {purchase.img}
       name = {purchase.name}
