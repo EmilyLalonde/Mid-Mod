@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot 1`] = `
+<article>
+  <img
+    alt=""
+    src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-xs-max-gold-select-2018?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1550795409154"
+  />
+  <h2>
+    iPhone Xs
+  </h2>
+  <h3>
+    900
+  </h3>
+  <p>
+    The latest phone to come out by Apple. It has a faster processor and improved camera to take HDR images.
+  </p>
+  <button>
+     Remove From History 
+  </button>
+</article>
+`;
