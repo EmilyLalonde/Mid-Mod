@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import CardContainer from '../CardContainer/CardContainer.js'
 
 class App extends Component {
   constructor() {
@@ -18,7 +19,7 @@ class App extends Component {
 
   
   render() {
-    // console.log(this.state.data)
+    console.log(this.state.data)
     return (
       <div className="App">
         <header>
@@ -28,7 +29,7 @@ class App extends Component {
           </div>
         </header>
         <div className='purchase-container'>
-
+        <CardContainer data = {this.state.data}/>
         </div>
       </div>
     );
