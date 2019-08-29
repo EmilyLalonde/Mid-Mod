@@ -35,6 +35,11 @@ class App extends Component {
       .then(newIdea => this.setState({ ideas: [...this.state.ideas, newPurchase] }))
       .catch(error => this.setState({ error: error.message }))
   }
+
+  deletePurchaseCard = (id) => {
+    const filteredData = this.state.data.filter( purchase => purchase.id !== id)
+    this.setState({data : filteredData})
+  }
   
   render() {
     console.log(this.state.data)
@@ -48,7 +53,7 @@ class App extends Component {
         </header>
         <div className='purchase-container'>
         <AppForm addPurchase={this.addPurchase}/>
-        <CardContainer data = {this.state.data}/>
+        <CardContainer data = {this.state.data} deletePurchaseCard = {this.deletePurchaseCard}/>
         </div>
       </div>
     );

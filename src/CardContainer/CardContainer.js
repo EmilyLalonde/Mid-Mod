@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../Card/Card.js'
 import '../CardContainer/CardContainer.css'
 
-const CardContainer = ({data}) => {
+const CardContainer = ({data, deletePurchaseCard}) => {
   const allPurchases = data.map(purchase => {
     return (
       <Card 
@@ -12,6 +12,7 @@ const CardContainer = ({data}) => {
       name = {purchase.name}
       description = {purchase.description}
       price = {purchase.price }
+      deletePurchaseCard = {deletePurchaseCard}
       />
     )
   })
