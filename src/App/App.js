@@ -19,7 +19,21 @@ class App extends Component {
   }
 
   addPurchase = (newPurchase) => {
-    this.setState({ data: [...this.state.data, newPurchase]})
+    // this.setState({ data: [...this.state.data, newPurchase]})
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ ...newPurchase })
+    };
+  
+    fetch('http://localhost:3001/api/v1/ideas', options)
+      .then(response => response.json())
+      .then(response => fetch(`http://localhost:3001/api/v1/ideas/${response.id}`))
+      .then(response => response.json())
+      .then(newIdea => this.setState({ ideas: [...this.state.ideas, newPurchase] }))
+      .catch(error => this.setState({ error: error.message }))
   }
   
   render() {
@@ -43,3 +57,5 @@ class App extends Component {
 
 
 export default App;
+
+  
