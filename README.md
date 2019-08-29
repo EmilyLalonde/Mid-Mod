@@ -57,3 +57,4 @@ Delete a purchase when the user clicks the `Remove From History` button.  The de
 * Now try testing your API calls.  Try writing out a few tests including happy path and sad path testing.
 
 * Add a button or drop down so that the user has the option to sort their past purchases by price from least to greatest or greatest to least.
+# Mid-Mod
